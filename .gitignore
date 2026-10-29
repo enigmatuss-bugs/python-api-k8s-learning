@@ -1,0 +1,20 @@
+
+# Python
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc
+
+# Local environment
+.env
+.env.*
+
+# Local Kubernetes secrets
+k8s/secret.yaml
+
+# Kubernetes secrets
+**/secret.yaml
+**/*-secret.yaml
+
+# Local files
+.DS_Store

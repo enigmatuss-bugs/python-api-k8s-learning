@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: python-batch-cron
+spec:
+  schedule: "*/1 * * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 3
+  failedJobsHistoryLimit: 1
+  jobTemplate:
+    spec:
+      backoffLimit: 3
+      template:
+        spec:
+          containers:
+            - name: python-batch
+              image: python-batch:v1
+              imagePullPolicy: IfNotPresent
+              env:
+                - name: JOB_NAME
+                  value: "scheduled-batch"
+          restartPolicy: Never
