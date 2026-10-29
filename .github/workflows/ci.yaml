@@ -3,6 +3,12 @@ name: Python API CI/CD
 on:
   push:
     branches: [main]
+    paths:
+      - "app.py"
+      - "requirements.txt"
+      - "Dockerfile"
+      - "tests/**"
+      - ".github/workflows/ci.yaml"
   pull_request:
     branches: [main]
 
