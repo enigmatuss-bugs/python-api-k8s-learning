@@ -2,7 +2,7 @@ replicaCount: 3
 
 image:
   repository: ghcr.io/enigmatuss-bugs/python-api-k8s-learning
-  tag: d2a681863f70940567bfc9df36d90302787821ea
+  tag: 45ab70062fb9a162ef156fef42b6f69fe0682736
   pullPolicy: Always
 
 service:
