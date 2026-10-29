@@ -32,6 +32,13 @@ def protected():
 
     return jsonify({"message": "Access granted!"})
 
+@app.route("/version")
+def version():
+    return {
+        "version": "2.0",
+        "message": "Deployed automatically using GitHub Actions and Argo CD"
+    }
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
