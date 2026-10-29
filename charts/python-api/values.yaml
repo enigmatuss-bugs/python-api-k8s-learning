@@ -1,9 +1,9 @@
 replicaCount: 3
 
 image:
-  repository: python-api
-  tag: v3
-  pullPolicy: IfNotPresent
+  repository: ghcr.io/enigmatuss-bugs/python-api-k8s-learning
+  tag: latest
+  pullPolicy: Always
 
 service:
   port: 80
